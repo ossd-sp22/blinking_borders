@@ -1,6 +1,5 @@
 html, body {
   width: 150px;
-  height: 300px;
 }
 
 .hidden {
@@ -17,22 +16,37 @@ html, body {
 
 
 .effect_1:hover{
-  background-color: #CFF2F2;
+  background-color: blue;
+  border: solid 2px black;
+  border-spacing: border-box;
+
 }
 .effect_2:hover {
-  background-color: #CFF2F2;
+  background-color: red;
+  border: solid 2px orange;
+  border-spacing: border-box;
 }
 .effect_3:hover {
-  background-color: #CFF2F2;
+  background-color: green;
+  border: solid 2px white;
+  border-spacing: border-box;
+
 }
 .blank:hover {
-  background-color: #EAEA9D;
+  background-color: rgba(0,0,0,0.05);
 }
 
 
+.effect_1{
+  background-color: rgba(0,0,255,0.6);
+}
+.effect_2{
+  background-color: rgba(255,0,0,0.6);
+}
+.effect_3{
+  background-color: rgba(0,255,0,0.6);
+}
 .blank {
-  background-color: #FBFBC9;
+  background-color: rgba(0,0,0,0.01);
 }
-.blue{
-  background-color: blue;
-}
+
