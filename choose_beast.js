@@ -60,7 +60,6 @@ function listenForClicks() {
       console.error(`Could not beastify: ${error}`);
     }
 
- 
     if (e.target.classList.contains("effect_1")) {
       browser.tabs.query({active: true, currentWindow: true})
         .then(effect_1)

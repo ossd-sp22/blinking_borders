@@ -15,25 +15,24 @@ html, body {
   cursor: pointer;
 }
 
-.effect:hover {
-  background-color: #CFF2F2;
-}
+
 .effect_1:hover{
   background-color: #CFF2F2;
 }
-
-.effect {
-  background-color: #E5F2F2;
+.effect_2:hover {
+  background-color: #CFF2F2;
 }
-
-.blank {
-  background-color: #FBFBC9;
+.effect_3:hover {
+  background-color: #CFF2F2;
 }
-
 .blank:hover {
   background-color: #EAEA9D;
 }
 
+
+.blank {
+  background-color: #FBFBC9;
+}
 .blue{
   background-color: blue;
 }

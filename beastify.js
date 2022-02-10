@@ -7,20 +7,23 @@
     return;
   }
 
-  let flag; 
-  let interval;
+  let interval1; 
+  let interval2;
   window.hasRun = true;
 
   function effect1(effect_url){
 
+    clearInterval(interval2);
+
     function blinking_1() {
-        interval = setInterval(function () { 
+      
+      interval1 = setInterval(function () { 
           blink_1();
         }, 500);
       }
       function blink_1() {
         document.body.style.border = "";
-        flag = setTimeout(function () {
+        setTimeout(function () {
           document.body.style.border = `solid 10px black`;
         }, 250);
       }
@@ -28,39 +31,50 @@
   }
 
   function effect2(effect_url){
-    document.body.style.border = "";
+    clearInterval(interval1);
+
+    function blinking_2() {
+        interval2 = setInterval(function () { 
+          blink_2();
+        }, 1000);
+      }
+      function blink_2() {
+        document.body.style.border = "";
+        setTimeout(function () {
+          document.body.style.border = "solid 5px orange";
+        }, 500);
+      }
+    blinking_2();
+
   }
 
-  function resetBackground(){
+  function effect3(){
 
     document.body.style['background-color'] = "";
     //document.body.style.border = "";
     //clearTimeout(flag);
-    clearInterval(interval);
-    // function blinking_2() {
-    //     setInterval(function () { 
-    //       blink_2();
-    //     }, 1000);
-    //   }
-    //   function blink_2() {
-    //     document.body.style.border = "";
-    //     setTimeout(function () {
-    //       document.body.style.border = "solid 10px black";
-    //     }, 500);
-    //   }
-    // blinking_2();
+    clearInterval(interval1);
+  
+  }
+
+  function clearall(){
+    clearInterval(interval1);
+    clearInterval(interval2);
   }
 
   
   browser.runtime.onMessage.addListener((message) => {
     if (message.action === "effect_change_1") {
       effect1(message.code);
-    } else if (message.action === "effect_change_2"){
-      effect(message.code);
-    } else if (message.action === "reset") {
-      resetBackground();
-    } else if (message.action === "remove"){
-      remove();
+    } 
+    else if (message.action === "effect_change_2"){
+      effect2(message.code);
+    } 
+    else if (message.action === "effect_change_3") {
+      effect3();
+    } 
+    else if (message.action === "reset"){
+      clearall();
     }
   });
 
