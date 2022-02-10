@@ -101,6 +101,6 @@ function reportExecuteScriptError(error) {
 }
 
 
-browser.tabs.executeScript({file: "/beastify.js"})
+browser.tabs.executeScript({file: "/effectify.js"})
 .then(listenForClicks)
 .catch(reportExecuteScriptError);

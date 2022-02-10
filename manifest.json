@@ -4,7 +4,7 @@
   "name": "Blinking Borders",
   "version": "1.0",
 
-  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
+  "description": "Adds an extension to the FireFox browser that, when clicked, contains a popup. Each option in the popup is a different effect. Try them all!",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
   "icons": {
     "48": "icons/borders.jpg"
@@ -16,13 +16,13 @@
 
   "browser_action": {
     "default_icon": "icons/borders.jpg",
-    "default_title": "Beastify",
-    "default_popup": "choose_beast.html"
+    "default_title": "Blinking Borders!",
+    "default_popup": "choose_effect.html"
   },
   "content_scripts":[
     {
       "matches":["*://*.google.com/"],
-      "js": ["beastify.js"]
+      "js": ["effectify.js"]
     }
   ]
 }

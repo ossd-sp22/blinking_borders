@@ -22,13 +22,13 @@
     function blinking_1() {
       interval1 = setInterval(function () { 
           blink_1();
-        }, 500);
+        }, 300);
     }
     function blink_1() {
       document.body.style.border = "";
       setTimeout(function () {
         document.body.style.border = `solid 10px black`;
-      }, 250);
+      }, 150);
     }
     blinking_1();
   }
