@@ -9,29 +9,36 @@
 
   let interval1; 
   let interval2;
+  let interval3;
   window.hasRun = true;
 
   function effect1(effect_url){
 
     clearInterval(interval2);
+    clearInterval(interval3);  
+
+    document.body.style['background-color'] = "blue";
 
     function blinking_1() {
-      
       interval1 = setInterval(function () { 
           blink_1();
         }, 500);
-      }
-      function blink_1() {
-        document.body.style.border = "";
-        setTimeout(function () {
-          document.body.style.border = `solid 10px black`;
-        }, 250);
-      }
-    blinking_1(10, "black", 500);
+    }
+    function blink_1() {
+      document.body.style.border = "";
+      setTimeout(function () {
+        document.body.style.border = `solid 10px black`;
+      }, 250);
+    }
+    blinking_1();
   }
 
   function effect2(effect_url){
+
     clearInterval(interval1);
+    clearInterval(interval3);
+
+    document.body.style['background-color'] = "red";
 
     function blinking_2() {
         interval2 = setInterval(function () { 
@@ -50,16 +57,31 @@
 
   function effect3(){
 
-    document.body.style['background-color'] = "";
-    //document.body.style.border = "";
-    //clearTimeout(flag);
     clearInterval(interval1);
+    clearInterval(interval2);
+
+    document.body.style['background-color'] = "green";
+    
+    function blinking_3() {
+        interval3 = setInterval(function () { 
+          blink_3();
+        }, 800);
+      }
+      function blink_3() {
+        document.body.style.border = "";
+        setTimeout(function () {
+          document.body.style.border = "solid 15px white";
+        }, 400);
+      }
+    blinking_3();
   
   }
 
   function clearall(){
+    document.body.style['background-color'] = "white";
     clearInterval(interval1);
     clearInterval(interval2);
+    clearInterval(interval3);
   }
 
   

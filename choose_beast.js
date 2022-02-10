@@ -24,7 +24,12 @@ function listenForClicks() {
     }
 
     function effect_2(tabs){
-
+      browser.tabs.insertCSS({code: removecss}).then(() => {
+        browser.tabs.sendMessage(tabs[0].id, {
+          command: "remove",
+          code: "remove"
+        });
+      });
       browser.tabs.insertCSS({code: effect2}).then(() => {
         browser.tabs.sendMessage(tabs[0].id,{
           action: "effect_change_2",
@@ -34,6 +39,12 @@ function listenForClicks() {
     }
 
     function effect_3(tabs){
+      browser.tabs.insertCSS({code: removecss}).then(() => {
+        browser.tabs.sendMessage(tabs[0].id, {
+          command: "remove",
+          code: "remove"
+        });
+      });
       browser.tabs.insertCSS({code: effect3}).then(() => {
         browser.tabs.sendMessage(tabs[0].id,{
           action: "effect_change_3",
@@ -69,6 +80,11 @@ function listenForClicks() {
       browser.tabs.query({active: true, currentWindow: true})
         .then(effect_2)
         .catch(reportError);
+    }
+    else if (e.target.classList.contains("effect_3")){
+      browser.tabs.query({active: true, currentWindow: true})
+      .then(effect_3)
+      .catch(reportError);
     }
     else if (e.target.classList.contains("blank")) {
       browser.tabs.query({active: true, currentWindow: true})
