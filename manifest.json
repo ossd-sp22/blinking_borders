@@ -5,7 +5,7 @@
   "version": "1.0",
 
   "description": "Adds an extension to the FireFox browser that, when clicked, contains a popup. Each option in the popup is a different effect. Try them all!",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "homepage_url": "https://github.com/ossd-sp22/blinking_borders",
   "icons": {
     "48": "icons/borders.jpg"
   },
