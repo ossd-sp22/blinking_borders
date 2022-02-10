@@ -4,6 +4,6 @@ Thank you for your interest in contributing to the Blinking Borders Extension re
 * Fix a bug: we have a list of [issues](https://github.com/ossd-sp22/blinking_borders/issues)
 issues, or maybe you found your own.
 
-# Guidelines
+## Guidelines
 Please read our [Code of Conduct](https://github.com/ossd-sp22/blinking_borders/blob/main/CODE_OF_CONDUCT.md) to read behavioral guidelines for all our contributors. 
 
