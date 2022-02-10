@@ -1,6 +1,7 @@
 
    const effect1 = `body { background-color: blue }`;
    const effect2 = `body { background-color: red }`;
+   const effect3 = `body {background-color: green};`
    const removecss = `body { background-color: None,
                              border: None }`;
 
@@ -22,11 +23,21 @@ function listenForClicks() {
       });
     }
 
-    function effect(tabs){
+    function effect_2(tabs){
+
       browser.tabs.insertCSS({code: effect2}).then(() => {
         browser.tabs.sendMessage(tabs[0].id,{
           action: "effect_change_2",
           code : "effect_2"
+        })
+      })
+    }
+
+    function effect_3(tabs){
+      browser.tabs.insertCSS({code: effect3}).then(() => {
+        browser.tabs.sendMessage(tabs[0].id,{
+          action: "effect_change_3",
+          code : "effect_3"
         })
       })
     }
@@ -55,12 +66,12 @@ function listenForClicks() {
         .then(effect_1)
         .catch(reportError);
     }
-    else if (e.target.classList.contains("effect")) {
+    else if (e.target.classList.contains("effect_2")) {
       browser.tabs.query({active: true, currentWindow: true})
-        .then(effect)
+        .then(effect_2)
         .catch(reportError);
     }
-    else if (e.target.classList.contains("reset")) {
+    else if (e.target.classList.contains("blank")) {
       browser.tabs.query({active: true, currentWindow: true})
         .then(reset)
         .catch(reportError);

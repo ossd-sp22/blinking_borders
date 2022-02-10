@@ -15,7 +15,7 @@
   ],
 
   "browser_action": {
-    "default_icon": "icons/beasts-32.png",
+    "default_icon": "icons/borders.jpg",
     "default_title": "Beastify",
     "default_popup": "choose_beast.html"
   },
@@ -24,12 +24,5 @@
       "matches":["*://*.google.com/"],
       "js": ["beastify.js"]
     }
-  ],
-
-  "web_accessible_resources": [
-    "beasts/frog.jpg",
-    "beasts/turtle.jpg",
-    "beasts/snake.jpg"
   ]
-
 }

@@ -1,5 +1,6 @@
 html, body {
-  width: 100px;
+  width: 150px;
+  height: 300px;
 }
 
 .hidden {
@@ -14,19 +15,22 @@ html, body {
   cursor: pointer;
 }
 
-.beast:hover {
+.effect:hover {
+  background-color: #CFF2F2;
+}
+.effect_1:hover{
   background-color: #CFF2F2;
 }
 
-.beast {
+.effect {
   background-color: #E5F2F2;
 }
 
-.reset {
+.blank {
   background-color: #FBFBC9;
 }
 
-.reset:hover {
+.blank:hover {
   background-color: #EAEA9D;
 }
 

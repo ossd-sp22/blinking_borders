@@ -6,44 +6,49 @@
   if (window.hasRun) {
     return;
   }
+
+  let flag; 
+  let interval;
   window.hasRun = true;
 
-
   function effect1(effect_url){
-    if (effect_url == "effect_1"){
-      // document.body.style.border = "";
-      // document.body.style['background-color'] = "blue";
-    }
-    else if (effect_url == "effect_2"){
-      // document.body.style.border = "";
-      // document.body.style['background-color'] = "red";
-    }
-    else if (effect_url == "effect_3"){
-      document.body.style.border = "";
-      document.body.style['background-color'] = "green";
-    }
+
+    function blinking_1() {
+        interval = setInterval(function () { 
+          blink_1();
+        }, 500);
+      }
+      function blink_1() {
+        document.body.style.border = "";
+        flag = setTimeout(function () {
+          document.body.style.border = `solid 10px black`;
+        }, 250);
+      }
+    blinking_1(10, "black", 500);
   }
 
-  function effect(effect_url){
+  function effect2(effect_url){
     document.body.style.border = "";
   }
-
 
   function resetBackground(){
 
     document.body.style['background-color'] = "";
-    function startBlinking() {
-        setInterval(function () { 
-          blink();
-        }, 1000);
-      }
-      function blink() {
-        document.body.style.border = "";
-        setTimeout(function () {
-          document.body.style.border = "solid 10px black";
-        }, 500);
-      }
-    startBlinking();
+    //document.body.style.border = "";
+    //clearTimeout(flag);
+    clearInterval(interval);
+    // function blinking_2() {
+    //     setInterval(function () { 
+    //       blink_2();
+    //     }, 1000);
+    //   }
+    //   function blink_2() {
+    //     document.body.style.border = "";
+    //     setTimeout(function () {
+    //       document.body.style.border = "solid 10px black";
+    //     }, 500);
+    //   }
+    // blinking_2();
   }
 
   
