@@ -47,13 +47,13 @@
     function blinking_2() {
         interval2 = setInterval(function () { 
           blink_2();
-        }, 500);
+        }, 1000);
       }
       function blink_2() {
         document.body.style.border = "";
         setTimeout(function () {
-          document.body.style.border = "dashed 5px orange";
-        }, 250);
+          document.body.style.border = "solid 5px orange";
+        }, 500);
       }
     blinking_2();
 
@@ -75,7 +75,7 @@
       function blink_3() {
         document.body.style.border = "";
         setTimeout(function () {
-          document.body.style.border = "double 15px white";
+          document.body.style.border = "solid 15px white";
         }, 400);
       }
     blinking_3();

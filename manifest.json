@@ -21,7 +21,6 @@
   },
   "content_scripts":[
     {
-      "matches": ["*://*.com/"],
       "js": ["effectify.js"]
     }
   ]
