@@ -2,6 +2,7 @@
    const effect1 = `body { background-color: blue }`;
    const effect2 = `body { background-color: red }`;
    const effect3 = `body {background-color: green};`
+   const effect4 = `body {background-color: yellow}`;
    const removecss = `body { background-color: None,
                              border: None }`;
 
@@ -53,6 +54,20 @@ function listenForClicks() {
       })
     }
 
+    function effect_4(tabs){
+      browser.tabs.insertCSS({code: removecss}).then(() => {
+        browser.tabs.sendMessage(tabs[0].id, {
+          command: "remove",
+          code: "remove"
+        });
+      });
+      browser.tabs.insertCSS({code: effect4}).then(() => {
+        browser.tabs.sendMessage(tabs[0].id,{
+          action: "effect_change_4",
+          code : "effect_4"
+        })
+      })
+    }
 
     function reset(tabs) {
       browser.tabs.removeCSS({code: effect1}).then(() => {
@@ -68,7 +83,7 @@ function listenForClicks() {
     }
 
     function reportError(error) {
-      console.error(`Could not beastify: ${error}`);
+      console.error(`Error: ${error}`);
     }
 
     if (e.target.classList.contains("effect_1")) {
@@ -84,6 +99,11 @@ function listenForClicks() {
     else if (e.target.classList.contains("effect_3")){
       browser.tabs.query({active: true, currentWindow: true})
       .then(effect_3)
+      .catch(reportError);
+    }
+    else if (e.target.classList.contains("effect_4")){
+      browser.tabs.query({active: true, currentWindow: true})
+      .then(effect_4)
       .catch(reportError);
     }
     else if (e.target.classList.contains("blank")) {

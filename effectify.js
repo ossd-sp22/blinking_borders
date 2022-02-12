@@ -10,12 +10,15 @@
   let interval1; 
   let interval2;
   let interval3;
+  let interval4;
+
   window.hasRun = true;
 
   function effect1(effect_url){
 
     clearInterval(interval2);
-    clearInterval(interval3);  
+    clearInterval(interval3); 
+    clearInterval(interval4); 
 
     document.body.style['background-color'] = "blue";
 
@@ -37,19 +40,20 @@
 
     clearInterval(interval1);
     clearInterval(interval3);
+    clearInterval(interval4);
 
     document.body.style['background-color'] = "red";
 
     function blinking_2() {
         interval2 = setInterval(function () { 
           blink_2();
-        }, 1000);
+        }, 500);
       }
       function blink_2() {
         document.body.style.border = "";
         setTimeout(function () {
-          document.body.style.border = "solid 5px orange";
-        }, 500);
+          document.body.style.border = "dashed 5px orange";
+        }, 250);
       }
     blinking_2();
 
@@ -59,6 +63,7 @@
 
     clearInterval(interval1);
     clearInterval(interval2);
+    clearInterval(interval4);
 
     document.body.style['background-color'] = "green";
     
@@ -70,18 +75,42 @@
       function blink_3() {
         document.body.style.border = "";
         setTimeout(function () {
-          document.body.style.border = "solid 15px white";
+          document.body.style.border = "double 15px white";
         }, 400);
       }
     blinking_3();
   
   }
 
+  function effect4(){
+    
+    clearInterval(interval1);
+    clearInterval(interval2);
+    clearInterval(interval3);
+
+    document.body.style['background-color'] = "yellow";
+
+    function blinking_4() {
+        interval4 = setInterval(function () { 
+          blink_4();
+        }, 400);
+      }
+      function blink_4() {
+        document.body.style.border = "";
+        setTimeout(function () {
+          document.body.style.border = "dotted 10px pink";
+        }, 200);
+      }
+    blinking_4();
+  }
+
+
   function clearall(){
     document.body.style['background-color'] = "white";
     clearInterval(interval1);
     clearInterval(interval2);
     clearInterval(interval3);
+    clearInterval(interval4);
   }
 
   
@@ -95,6 +124,9 @@
     else if (message.action === "effect_change_3") {
       effect3();
     } 
+    else if (message.action === "effect_change_4"){
+      effect4();
+    }
     else if (message.action === "reset"){
       clearall();
     }
