@@ -10,15 +10,12 @@
   let interval1; 
   let interval2;
   let interval3;
-  let interval4;
-
   window.hasRun = true;
 
   function effect1(effect_url){
 
     clearInterval(interval2);
-    clearInterval(interval3); 
-    clearInterval(interval4); 
+    clearInterval(interval3);  
 
     document.body.style['background-color'] = "blue";
 
@@ -40,7 +37,6 @@
 
     clearInterval(interval1);
     clearInterval(interval3);
-    clearInterval(interval4);
 
     document.body.style['background-color'] = "red";
 
@@ -63,7 +59,6 @@
 
     clearInterval(interval1);
     clearInterval(interval2);
-    clearInterval(interval4);
 
     document.body.style['background-color'] = "green";
     
@@ -82,35 +77,11 @@
   
   }
 
-  function effect4(){
-    
-    clearInterval(interval1);
-    clearInterval(interval2);
-    clearInterval(interval3);
-
-    document.body.style['background-color'] = "yellow";
-
-    function blinking_4() {
-        interval4 = setInterval(function () { 
-          blink_4();
-        }, 400);
-      }
-      function blink_4() {
-        document.body.style.border = "";
-        setTimeout(function () {
-          document.body.style.border = "dotted 10px pink";
-        }, 200);
-      }
-    blinking_4();
-  }
-
-
   function clearall(){
     document.body.style['background-color'] = "white";
     clearInterval(interval1);
     clearInterval(interval2);
     clearInterval(interval3);
-    clearInterval(interval4);
   }
 
   
@@ -124,9 +95,6 @@
     else if (message.action === "effect_change_3") {
       effect3();
     } 
-    else if (message.action === "effect_change_4"){
-      effect4();
-    }
     else if (message.action === "reset"){
       clearall();
     }
