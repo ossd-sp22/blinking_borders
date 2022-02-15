@@ -12,6 +12,29 @@ identity and orientation.
 We pledge to act and interact in ways that contribute to an open, welcoming,
 diverse, inclusive, and healthy community.
 
+## Our Values
+Please read our values carefully, as they are imperitive to maintaining a welcoming and constructive community.
+
+* __Be friendly and welcoming.__
+* __Be patient.__
+  * Remember that people have varying communication styles and that not everyone is using their native language. (Meaning and tone can be lost in translation.)
+* __Be thoughtful.__
+  * Productive communication requires effort. Think about how your words will be interpreted.
+  * Remember that sometimes it is best to refrain entirely from commenting.
+* __Be respectful.__
+  * In particular, respect differences of opinion.
+* __Be charitable.__
+  * Interpret the arguments of others in good faith, do not seek to disagree.
+  * When we do disagree, try to understand why.
+* __Be constructive.__
+  * Avoid derailing: stay on topic; if you want to talk about something else, start a new conversation.
+  * Avoid unconstructive criticism: don't merely decry the current state of affairs; offer—or at least solicit—suggestions as to how things may be improved.
+  * Avoid snarking (pithy, unproductive, sniping comments)
+  * Avoid discussing potentially offensive or sensitive issues; this all too often leads to unnecessary conflict.
+  * Avoid microaggressions (brief and commonplace verbal, behavioral and environmental indignities that communicate hostile, derogatory or negative slights and insults to a person or group).
+* __Be responsible.__
+  * What you say and do matters. Take responsibility for your words and actions, including their consequences, whether intended or otherwise.
+
 ## Our Standards
 
 Examples of behavior that contributes to a positive environment for our
